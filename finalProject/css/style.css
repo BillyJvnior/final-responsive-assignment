@@ -1,0 +1,81 @@
+body{
+    background-color: floralwhite;
+    margin: 5% 5% 5% 5%;
+     
+}
+h1{
+    text-align: center;
+}
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 95%;
+    row-gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.grid img{
+    width: 100%;
+}
+
+figcaption{
+        background-color: rgba(215, 163, 245, 0.916);
+        
+    }
+
+
+@media screen and (min-width:772px){
+        body{
+         background-color: rgb(100, 87, 87);
+       } 
+       
+       .grid{
+         grid-template-columns: 45% 45%;
+         align-items: center;
+       }
+    .grid figure{
+           border-radius: 100%; }
+     .grid figure:last-child{
+       grid-column: 1/span 2;
+       
+       
+     }
+   }
+
+@media screen and (min-width:992px){
+    body{
+     background-color: rgb(88, 127, 125);
+   } 
+   
+   .grid{
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+   }
+   .grid figure{
+       border-radius: 100%; }
+   
+ .grid figure:nth-child(3n){
+   grid-column: 1/span 2;
+
+ }
+}
+
+@media (prefers-reduced-motion){
+    body{
+        scroll-behavior:none ;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .grid{
+        background-color: rgb(26, 25, 25);
+        color: rgb(216, 199, 199);}
+        .grid figure{
+            border: 5px rgb(0, 0, 0);
+    }
+    p{
+        color: white;}
+    }
